@@ -9,8 +9,8 @@ I was busy converting a number of sites from joomla! to jekyll. Since some of th
 * You'll need [jekyll](http://jekyllrb.com) to use this template
 * Download all files in a directory on your local machine
 * adjust `_config.yml`: set your desired destination directory for the rendered site
-** use `jekyll build` to build the site
-** deploy the site to a html server or use a local webserver and view it on your localhost
+ * use `jekyll build` to build the site
+ * deploy the site to a html server or use a local webserver and view it on your localhost
 * as an alternative, you can use `jekyll serve` (if you have a html server on your machine)
 
 The site should look like this:  
@@ -25,17 +25,13 @@ The site should look like this:
 
 * Automatic sidebar  
 the sidebar can contain up to 3 components:
-
-** Subnavigation menu  
+ * Subnavigation menu  
 When a page, which makes part of a subnavigation group is displayed, in the sidebar, there will automatically appear a menu with all pages of this subnavigation group  
 ![monolingual page](readme_img/screenshot-3.png)
-
-** Secondary navigation  
+ * Secondary navigation  
 In the navigation control file, more than one navigation trees can be defined. The "main" tree is used for the nav bar, whilst all others can be used to be displayed in the sidebar of certain pages
-
-** Sidebar mini article  
+ * Sidebar mini article  
 In the navigation file, a content section can be set as "sidebar-main". If done so, the content will appear in a box in the sidebar
-
 * Customizeable headlines  
 In the contents file, a section for headlines can be included in order to have a big headline over all pages (bootstrap jumbotron).
 
