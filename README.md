@@ -17,6 +17,17 @@ The site should look like this:
 ```
 ![Main page](readme_img/screenshot-1.png)
 ```
+## Features
+
+* Dynamic language selector
+** The language selector contains only _really_ selectable languages for the specific site. If no content in a language is defined for one site, the language will not appear in the selector  
+![monolingual page](reame_img/screenshot-2.png)
+
+* Automatic sidebar  
+the sidebar can contain up to 4 components:
+** Subnavigation menu  
+When a page, which makes part of a subnavigation group is displayed, in the sidebar, there will automatically appear a menu with all pages of this subnavigation group
+
 ## Architecture
 
 ### YAML content <a id="yaml-content"></a>
