@@ -1,0 +1,5 @@
+<!-- Include an overall pages title here -->
+{% assign headdata = site.data.locales.headlines.[page.lang] %}
+<div class="jumbotron">
+    {{ headdata | textilize }}
+</div>

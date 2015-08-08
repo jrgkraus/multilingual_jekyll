@@ -1,0 +1,35 @@
+<!--In case we need a php file instead-->
+{% if include.nav.filetype %}
+    {% assign filetype = include.nav.filetype %}
+{% else %}
+    {% assign filetype = "html" %}
+{% endif %}
+<!--Determine if the nav is the actual site-->
+{%if include.nav.url-base == page.url-base%}
+    {%assign actnav = include.nav%}
+    {%assign itemclass = "active"%}
+    {%assign subpages = include.super%}
+{%else%}
+    {%assign itemclass = ""%}
+{%endif%}
+                    
+<li class="{{itemclass}} {% if include.nav.subpages %}dropdown{% endif %}" >
+    <a href="{{ site.baseurl }}/{{include.nav.url-base}}{{actlang.postfix}}.{{filetype}}"
+       {%if include.nav.subpages %}class="dropdown-toggle" data-toggle="dropdown"{% endif %}>
+        {% if include.nav.icon %}
+            <span class="glyphicon glyphicon-{{include.nav.icon}}">
+            </span>
+        {% endif %}
+        {{ include.nav.title.[page.lang] }}
+        {%if include.nav.subpages %}
+            <span class="caret"></span>
+        {%endif%}
+    </a>
+    {%if include.nav.subpages %}
+    <ul class="dropdown-menu" role="menu">
+        {%for subnav in include.nav.subpages%}
+        {%include layout-default-nav-item.html nav=subnav subnav="true" super=include.nav.subpages%}
+        {%endfor%}
+    </ul>
+    {%endif%}
+</li>

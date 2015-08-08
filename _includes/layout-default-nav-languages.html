@@ -1,0 +1,22 @@
+<div class="btn-group btn-group-xs pull-right" role="toolbar" aria-label="...">
+{% for langpar in site.data.languages %}
+{% if site.data.locales.[page.url-base].[langpar.lang] %}
+    {% if langpar.lang == page.lang %}
+    {%assign actlang == langpar%}
+    {% else %}
+        {% if page.type %}
+            {%assign url-type = page.type %}
+        {% else %}
+            {%assign url-type = 'html' %}
+        {%endif %}
+        {% assign nav-link = url-type | prepend:"." | prepend:langpar.postfix | prepend:page.url-base | prepend:'/' | prepend:site.baseurl %}
+        {% assign nav-img = langpar.image | prepend:'/images/' | prepend:site.baseurl %}
+        <button class="btn btn-default navbar-btn">
+        <a href="{{ nav-link }}">
+            <img alt="{{ langpar.descr }}" src="{{ nav-img }}" />
+        </a>
+        </button>
+    {% endif %}
+{% endif %}
+{% endfor %}
+</div>

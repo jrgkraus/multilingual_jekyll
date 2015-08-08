@@ -1,0 +1,4 @@
+---
+  baseurl: "/multilang_template"
+  destination: "~/sites/multilang_template"
+  title: Template

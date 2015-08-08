@@ -1,0 +1,9 @@
+---
+  - lang: de
+    postfix: "-de"
+    image: flag-de.jpg
+    description: deutsch
+  - lang: en
+    postfix: ""
+    image: flag-en.jpg
+    description: English

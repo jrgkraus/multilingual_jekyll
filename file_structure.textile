@@ -1,0 +1,7 @@
+---
+layout: default
+url-base: file_structure
+lang: en
+---
+
+{% include page-simple.textile %}

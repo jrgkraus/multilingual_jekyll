@@ -1,0 +1,60 @@
+<!doctype html >
+<html lang="{{ page.lang }}">
+    <!-- **********************************
+         Header declarations 
+         ********************************** -->
+    {% include layout-default-header.html %}
+    <body>
+        <!-- Anchor for the "go to top" link -->
+        <a name="top"></a>
+        <!-- *****************************
+             main navigation bar 
+             ***************************** -->
+        {% include layout-default-nav.html %}
+        <!-- *************************************
+             main content container
+             preserve 50 px for the navigation bar 
+             ************************************** -->
+        <div class="container" style="margin-top:50px">
+            <!-- ***********************************
+                 Use the headlines include to show
+                 a title or something similar
+                 *********************************** -->
+            {% include layout-default-headlines.html %}
+            <div class="row">
+                <!-- main content grid --> 
+                {%if actnav.sidemenu != null or actnav.sidebar != null% or subpages != null%}
+                    <!-- branch for pages with a sidebar. This is used if one of the following 
+                         options is used:
+                         - secondary menu is active (see _data/nav.yaml):
+                            - the secondary menu is shown in the sidebar
+                         - the page is a subpage:
+                            - a menu to navigate the sibling subpages will show up 
+-->
+                    <div class="col-sm-9">
+                        {{ content }}
+                    </div>
+                    <div class="col-sm-3">
+                        {%if actnav.sidebar%}
+                            {%include layout-default-sidebar.html%}
+                        {%endif%}
+                        {%if actnav.sidemenu%}
+                            {%assign sidepages = site.data.nav.[actnav.sidemenu]%}
+                            {%include layout-default-nav-secondary.html list=sidepages%}
+                        {%endif%}
+                        {%if subpages != null%}
+                            {%include layout-default-nav-secondary.html list=subpages%}
+                        {%endif%}
+                    </div>
+                    </div>
+                {%else%}
+                    {{ content }}
+                {%endif%}
+            </div>
+        </div>
+        <div class="container-fluid">
+            {% include layout-default-footer.html %}
+        </div>
+        <script src="js/lightbox.min.js"></script>
+    </body>
+</html>

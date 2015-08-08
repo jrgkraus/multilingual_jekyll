@@ -1,0 +1,38 @@
+main:
+# This is the main navigation tree that appears in the upper nav bar
+      # an icon from bootstrap's "glyphicon-" set. Here, it will be expanded to "glyphicon-home"
+    - icon: home
+      # the url-base is used to construct the file name including the language suffix
+      # i.e. this entry stands for the files index.html, index-en.html, index-de.html
+      # see _data/languages.yml for the language settings
+      url-base: index
+      sidebar: sidebar-main
+      # this option makes a secondary menu appear on the right. It is possible to declare multiple secondary menu trees. See the "secondary" tree below
+      sidemenu: secondary
+    - title:
+        en: Multilingual
+      url-base: multilingual
+    - title: # this one has a title in addition to the icon. The title is multilingual
+        en: File structure
+        de: Dateistruktur
+      url-base: file_structure
+      subpages: 
+        - title:
+            en: Main page files
+          url-base: main_files
+        - title: 
+            en: YAML files
+          url-base: yaml_files
+        - title:
+            en: Layout includes
+          url-base: layout_includes
+        - title:
+            en: Page includes
+          url-base: page_includes
+secondary:
+    # an additional menu, that can be activated as a secondary menu on the right. See option "sidemenu" in the items of the main tree
+    - title:
+        en: About me
+        de: Über mich
+      url-base: about_me 
+      sidemenu: secondary

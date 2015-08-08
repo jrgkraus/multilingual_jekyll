@@ -1,0 +1,35 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+<!--            draw the expand button for mobile menu-->
+            <button type="button" class="navbar-toggle collapsed"
+                data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="navbar-toggle collapsed" id="lang">
+                {% include layout-default-nav-languages.html %}
+            </div>
+        </div>
+<!--        Build the navigation bar -->
+        <div class="collapse navbar-collapse"
+             id="navbar">
+<!--            Include the language links-->
+            {% include layout-default-nav-languages.html %}
+            <ul class="nav navbar-nav" >
+<!--                Main navigation items-->
+                {% for nav in site.data.nav.main %}
+                    {% include layout-default-nav-item.html nav=nav %}
+                {% endfor %}
+<!--                Get actual navigation record for sidemenu pages-->
+                {% for nav in site.data.nav.secondary %}
+                    {%if nav.url-base == page.url-base%}
+                        {%assign actnav = nav%}
+                    {%endif%}
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</nav>
