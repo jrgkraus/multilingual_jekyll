@@ -139,7 +139,7 @@ secondary:
 
 The template supports submenus up to one level of nesting. They will appear as dropdown menus in the navigation bar. Besides the "main" branch of the hierarchy, you can add one or more secondary branches that can appear as a secondary navigation menu in the sidebar setting the "sidemenu" option of a page.
 
-The "title" subtree is used for the navigation link. It contains texts in the various languages supported by the page. The language selector will only show buttons for lanugages that are specified in this subtree. Since the actual language is not displayed in the language selector, a page without a title in a foreign language will not have any language selector.
+The "title" subtree is used for the navigation link. It contains texts in the various languages supported by the page. The language selector will only show buttons for languages that are specified in this subtree. Since the actual language is not displayed in the language selector, a page without a title in a foreign language will not have any language selector.
 
 ### Skeleton page files
 
