@@ -30,28 +30,39 @@
                             - the secondary menu is shown in the sidebar
                          - the page is a subpage:
                             - a menu to navigate the sibling subpages will show up 
+                         - the "sidebar" option of the nav item is set
+                            - a box with the addressed content will show up
 -->
+                    <!-- Two column grid 9 - 3 -->
                     <div class="col-sm-9">
                         {{ content }}
                     </div>
+                    <!-- Sidebar -->
                     <div class="col-sm-3">
+                        <!-- display the sidebar content, if defined -->
                         {%if actnav.sidebar%}
                             {%include layout-default-sidebar.html%}
                         {%endif%}
+                        <!-- display the secondary menu ("sidemenu") if defined-->
                         {%if actnav.sidemenu%}
                             {%assign sidepages = site.data.nav.[actnav.sidemenu]%}
                             {%include layout-default-nav-secondary.html list=sidepages%}
                         {%endif%}
+                        <!-- display navigation of the current subpages group -->
                         {%if subpages != null%}
                             {%include layout-default-nav-secondary.html list=subpages%}
                         {%endif%}
                     </div>
                     </div>
                 {%else%}
+                    <!-- branch for pages without sidebar objects -->
                     {{ content }}
                 {%endif%}
             </div>
         </div>
+        <!-- ******************************
+             Footer 
+             ****************************** -->
         <div class="container-fluid">
             {% include layout-default-footer.html %}
         </div>
