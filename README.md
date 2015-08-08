@@ -145,15 +145,15 @@ The "title" subtree is used for the navigation link. It contains texts in the va
 
 For the rendering of the site, it is important to have one file for each language version of each page. In this template, the following skeleton files are used:
 
-* index.textile  
+* `index.textile`  
 The main page in default language
-* index-de.textile  
+* `index-de.textile`  
 Main page in german language
-* subpages.textile  
+* `subpages.textile`  
 Header entry for the submenu in main nav
-* sub-1.textile  
+* `sub-1.textile`  
 First submenu entry in default lang
-* sub-1-de.textile  
+* `sub-1-de.textile`  
 First submenu entry in German
 
 and so on.
@@ -212,4 +212,4 @@ The default layout contains a responsive navbar which will collapse when the vie
 In the `css/custom.css` file, there are two adjustments for the language selector
 
 
-[1](http://getbootstrap.com)
+[1]: (http://getbootstrap.com)
