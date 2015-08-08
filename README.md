@@ -25,8 +25,10 @@ The site should look like this:
 
 * Automatic sidebar  
 the sidebar can contain up to 4 components:
+
 ** Subnavigation menu  
-When a page, which makes part of a subnavigation group is displayed, in the sidebar, there will automatically appear a menu with all pages of this subnavigation group
+When a page, which makes part of a subnavigation group is displayed, in the sidebar, there will automatically appear a menu with all pages of this subnavigation groupn  
+![monolingual page](readme_img/screenshot-3.png)
 
 ## Architecture
 
