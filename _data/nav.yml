@@ -1,5 +1,5 @@
-main:
 # This is the main navigation tree that appears in the upper nav bar
+main:
       # an icon from bootstrap's "glyphicon-" set. Here, it will be expanded to "glyphicon-home"
     - icon: home
       # the url-base is used to construct the file name including the language suffix
@@ -9,30 +9,37 @@ main:
       sidebar: sidebar-main
       # this option makes a secondary menu appear on the right. It is possible to declare multiple secondary menu trees. See the "secondary" tree below
       sidemenu: secondary
-    - title:
-        en: Multilingual
-      url-base: multilingual
     - title: # this one has a title in addition to the icon. The title is multilingual
-        en: File structure
-        de: Dateistruktur
-      url-base: file_structure
+        en: Submenu
+        de: Untermenü
+      url-base: submenu
       subpages: 
         - title:
-            en: Main page files
-          url-base: main_files
+            en: submenu-1
+            de: Untermenü-1
+          url-base: sub-1
         - title: 
-            en: YAML files
-          url-base: yaml_files
-        - title:
-            en: Layout includes
-          url-base: layout_includes
-        - title:
-            en: Page includes
-          url-base: page_includes
+            en: submenu-2
+            de: Untermenü-2
+          url-base: sub-2
+# an additional menu, that can be activated as a secondary menu on the right. See option "sidemenu" in the items of the main tree
 secondary:
-    # an additional menu, that can be activated as a secondary menu on the right. See option "sidemenu" in the items of the main tree
     - title:
-        en: About me
-        de: Über mich
-      url-base: about_me 
+        en: Side menu 1
+        de: Seitenmenü 1
+      url-base: side-1
+      sidemenu: secondary
+      subpages: 
+        - title:
+            en: submenu-1
+            de: Untermenü-1
+          url-base: side-1-sub-1
+        - title: 
+            en: submenu-2
+            de: Untermenü-2
+          url-base: side-1-sub-2
+    - title:
+        en: Side menu 2
+        de: Seitenmenü 2
+      url-base: side-2
       sidemenu: secondary

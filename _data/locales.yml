@@ -1,70 +1,54 @@
+# entry for the index page
 index:
-    de: 
-        title: Zuhause
-        main: Das ist die Hauptseite
-    en: 
-        title: About this page
+    # english version
+    en:
+        # the title is used as the site title as well as for the first header in the content
+        title: Multilingual jekyll template
+        # main can contain textile markup. In order to keep the line feeds, use the pipe sign 
         main: |
-            This template is intended for web developers who face the challenge of a multilanguage site without using a content management system. I wrote this template using the marvellous jekyll site generator. For further information, please refer to the "jekyll homepage":jekyllrb.com. 
+            A multilingual jekyll template
             
-            h2. What's included
+            h2. Header level 2
             
-            * YAML driven 
-            ** content: all content is kept in the "locales.yaml" data file
-            ** navigation: the file "nav.yaml" contains all information about main and secondary menus of the page
-            ** language settings: the file "languages.yaml" contains a list of all provided languages 
-
-            * Bootstrap
-            ** responsive: collapsing navbar and responsive grid
-            ** two-column layout:
-            by default, the pages have only one column. But there are three components that will be displayed in a sidebar to the righte:
-            *** An optional sidebar module
-            *** An automatically generated sub-navigation for 2nd level pages
-            *** An optional secondary menu that can be displayed by setting a paramter in the page entry in "nav.yaml"
+            As you can see, textile markup can be used in the content file
+    de:
+        title: Mehrsprachige jekyll Vorlage
+        main: |
+            Ein Template für mehrsprachige jekyll Web-Seiten
             
-            * Textile support
-            all content is entered using the textile markup language
-main_files:
+            h2. Überschrift 2
+            
+            Textile markup kann verwendet werden
+main-sub:
+    # Submenu headers do not have content, so the "main" variable is not necessary here
     en:
-        title: Main page files
-        main: |
-            to be continued
-yaml_files:
+        title: Submenu
+    de:
+        title: Unermenüs
+sub-1:
     en:
-        title: Yaml files
+        title: Sub-page 1
         main: |
-            to be contued
-page_includes:
+            First sub menu entry
+    de:
+        title: Untermenü 1
+        main: |
+            Erstes Untermenü
+sub-2:
     en:
-        title: Page includes
+        title: Sub-page 2
         main: |
-            to be contued
-layout_includes:
-    en:
-        title: Layout includes
-        main: |
-            to be contued
+            This page only exists in English
+            
 sidebar-main:
     en:
         title: "Sidebar 'Main'"
-        main: 
-            You can add sidebar content to each page of your site. Set the 'sidebar' variable in the nav.yaml file and create a corresponding entry in locales.yaml. You find this sidebar under the key "sidebar-main"
+        main: |
+            You can add sidebar content to each page of your site. Set the 'sidebar' variable in the nav.yaml file and create a corresponding entry in locales.yml. You find this sidebar under the key "sidebar-main"
     de:
         title: "Sidebar 'Main'"
         main: |
-            You can add sidebar content to each page of your site. Set the 'sidebar' variable in the nav.yaml file and create a corresponding entry in locales.yaml. You find this sidebar under the key "sidebar-main"
+            Du kannst Inhalt auf der Sidebar einblenden, wenn Du die 'sidebar' variable im file nav.yml füllst und einen entsprechenden Eintrag in locales.yml machst.
 headlines:
-    en: h1. Multilanguage jekyll site template
+    en: h1. Multilingual jekyll site template
     de: h1. Vorlage für mehrsprachige jekyll-Homepage
-about_me:
-    en: 
-        title: About me
-        main: |
-            Hello, my name is Jörg Krause. I am working as ABAP developer and do occasionally web development in my spare time
-multilingual:
-    en:
-        title: Multilingual architecture
-        main: |
-            h3. The file _languages.yaml_
-            
-            

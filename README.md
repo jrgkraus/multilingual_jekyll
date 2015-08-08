@@ -26,6 +26,10 @@ It starts with a key I call `base-url`. This is the file-name for the correspond
 
 The language dependant sections (`de:`, `en:`) refer to the language versions of the page. We'll come back to this later.
 
+The "title" var is used for the page title. This template also displays it in a `h1`tag at the top of the page.
+
+Since I decided to use `textile` as markdown renderer, the "main" branch of the content is included with the "textilize" filter. Therefore, you can use textile markup in the content
+
 ### Language control file
 Another yaml data file (`_data/languages.yml`) is used to control the multilingual functionality. 
 
@@ -76,3 +80,24 @@ main:
             en: Main page files
           url-base: main_files
 ```
+
+The template supports submenus up to one level of nesting. They will appear as dropdown menus in the navigation bar. Besides the "main" branch of the hierarchy, you can add one or more secondary branches that can appear as a secondary navigation menu in the sidebar setting the "sidemenu" option of a page.
+
+The "title" subtree is used for the navigation link. It contains texts in the various languages supported by the page. The language selector will only show buttons for lanugages that are specified in this subtree. Since the actual language is not displayed in the language selector, a page without a title in a foreign language will not have any language selector.
+
+### Skeleton page files
+
+For the rendering of the site, it is important to have one file for each language version of each page. In this template, the following skeleton files are used:
+
+* index-de.textile
+* index.textile
+* side-1-sub-1-de.textile
+* side-1-sub-1.textile
+* side-1-sub-2-de.textile
+* side-1-sub-2.textile
+* side-1.textile
+* side-2.textile
+* sub-1-de.textile
+* sub-1.textile
+* sub-2-de.textile
+* sub-2.textile
