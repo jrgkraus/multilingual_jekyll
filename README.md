@@ -24,11 +24,20 @@ The site should look like this:
 ![monolingual page](readme_img/screenshot-2.png)
 
 * Automatic sidebar  
-the sidebar can contain up to 4 components:
+the sidebar can contain up to 3 components:
 
 ** Subnavigation menu  
-When a page, which makes part of a subnavigation group is displayed, in the sidebar, there will automatically appear a menu with all pages of this subnavigation groupn  
+When a page, which makes part of a subnavigation group is displayed, in the sidebar, there will automatically appear a menu with all pages of this subnavigation group  
 ![monolingual page](readme_img/screenshot-3.png)
+
+** Secondary navigation  
+In the navigation control file, more than one navigation trees can be defined. The "main" tree is used for the nav bar, whilst all others can be used to be displayed in the sidebar of certain pages
+
+** Sidebar mini article  
+In the navigation file, a content section can be set as "sidebar-main". If done so, the content will appear in a box in the sidebar
+
+* Customizeable headlines  
+In the contents file, a section for headlines can be included in order to have a big headline over all pages (bootstrap jumbotron).
 
 ## Architecture
 
