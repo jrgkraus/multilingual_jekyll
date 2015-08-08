@@ -40,6 +40,38 @@ sub-2:
         main: |
             This page only exists in English
             
+side-1:
+    en:
+        title: Side menu entry 1
+        main: |
+            A page from the side menu
+    de:
+        title: Seitenmenü 1
+        main: |
+            Eine Seite aus dem Seitenmenü
+side-2:
+    en:
+        title: Side menu entry 2
+        main: |
+            A page from the side menu
+side-1-sub-1:
+    en:
+        title: Side menu sub entry 1
+        main: |
+            A page from the side menu
+    de:
+        title: Seitenmenü Untereintrag 1
+        main: |
+            Eine Seite aus dem Seitenmenü
+side-1-sub-2:
+    en:
+        title: Side menu sub entry 2
+        main: |
+            A page from the side menu
+    de:
+        title: Seitenmenü Untereintrag 2
+        main: |
+            Eine Seite aus dem Seitenmenü
 sidebar-main:
     en:
         title: "Sidebar 'Main'"

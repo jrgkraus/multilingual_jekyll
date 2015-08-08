@@ -6,7 +6,7 @@ I was busy converting a number of sites from joomla! to jekyll. Since some of th
 
 ## Architecture
 
-### YAML content
+### YAML content <a id="yaml-content"></a>
 For the transation of content, it is handy to have the texts in several languange together in one file, so cross checks can be done easily. 
 
 I decided to keep the whole content in a yaml file (--> `_data/locales.yml`). For each page in the site, it keeps a record of the form: 
@@ -89,15 +89,30 @@ The "title" subtree is used for the navigation link. It contains texts in the va
 
 For the rendering of the site, it is important to have one file for each language version of each page. In this template, the following skeleton files are used:
 
-* index-de.textile
 * index.textile
-* side-1-sub-1-de.textile
-* side-1-sub-1.textile
-* side-1-sub-2-de.textile
-* side-1-sub-2.textile
-* side-1.textile
-* side-2.textile
-* sub-1-de.textile
+The main page in default language
+* index-de.textile
+Main page in german language
+* subpages.textile
+Header entry for the submenu in main nav
 * sub-1.textile
-* sub-2-de.textile
-* sub-2.textile
+First submenu entry in default lang
+* sub-1-de.textile
+First submenu entry in German
+
+and so on.
+
+The contents of these files are rather similar:
+
+```
+---
+layout: default
+url-base: index
+lang: en
+---
+
+{% include page-simple.textile %}
+
+```
+
+As you see, there is front matter defining the layout (in the template, only one default layout is used), the language and the base url (see [YAML content](#yaml-content))

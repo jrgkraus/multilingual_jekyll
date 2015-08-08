@@ -1,0 +1,7 @@
+---
+layout: default
+url-base: subpages
+lang: en
+---
+
+{% include page-simple.textile %}
