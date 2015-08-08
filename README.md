@@ -13,15 +13,15 @@ I was busy converting a number of sites from joomla! to jekyll. Since some of th
 ** deploy the site to a html server or use a local webserver and view it on your localhost
 * as an alternative, you can use `jekyll serve` (if you have a html server on your machine)
 
-The site should look like this:
-```
+The site should look like this:  
+----
 ![Main page](readme_img/screenshot-1.png)
-```
+----
 ## Features
 
 * Dynamic language selector
 ** The language selector contains only _really_ selectable languages for the specific site. If no content in a language is defined for one site, the language will not appear in the selector  
-![monolingual page](reame_img/screenshot-2.png)
+![monolingual page](readme_img/screenshot-2.png)
 
 * Automatic sidebar  
 the sidebar can contain up to 4 components:
