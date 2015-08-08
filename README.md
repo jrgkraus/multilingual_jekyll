@@ -212,4 +212,4 @@ The default layout contains a responsive navbar which will collapse when the vie
 In the `css/custom.css` file, there are two adjustments for the language selector
 
 
-[1]: (http://getbootstrap.com)
+[1]: http://getbootstrap.com
