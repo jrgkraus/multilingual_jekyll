@@ -28,6 +28,14 @@
                     {%if nav.url-base == page.url-base%}
                         {%assign actnav = nav%}
                     {%endif%}
+                    {%if nav.subpages%}
+                        {%for subnav in nav.subpages%}
+                            {%if subnav.url-base == page.url-base%}
+                                {%assign subpages = nav.subpages%}
+                                {%assign actnav = subnav%}
+                            {%endif%}
+                        {%endfor%}
+                    {%endif%}
                 {% endfor %}
             </ul>
         </div>

@@ -34,10 +34,12 @@ secondary:
             en: submenu-1
             de: Untermenü-1
           url-base: side-1-sub-1
+          sidemenu: secondary
         - title: 
             en: submenu-2
             de: Untermenü-2
           url-base: side-1-sub-2
+          sidemenu: secondary
     - title:
         en: Side menu 2
         de: Seitenmenü 2

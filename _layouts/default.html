@@ -23,7 +23,7 @@
             {% include layout-default-headlines.html %}
             <div class="row">
                 <!-- main content grid --> 
-                {%if actnav.sidemenu != null or actnav.sidebar != null% or subpages != null%}
+                {%if actnav.sidemenu != null or actnav.sidebar != null% or actnav.subpages != null%}
                     <!-- branch for pages with a sidebar. This is used if one of the following 
                          options is used:
                          - secondary menu is active (see _data/nav.yaml):

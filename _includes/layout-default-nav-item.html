@@ -8,12 +8,11 @@
 {%if include.nav.url-base == page.url-base%}
     {%assign actnav = include.nav%}
     {%assign itemclass = "active"%}
-    {%assign subpages = include.super%}
 {%else%}
     {%assign itemclass = ""%}
 {%endif%}
                     
-<li class="{{itemclass}} {% if include.nav.subpages %}dropdown{% endif %}" >
+<li class="{{itemclass}} {% if subpages %}dropdown{% endif %}" >
     <a href="{{ site.baseurl }}/{{include.nav.url-base}}{{actlang.postfix}}.{{filetype}}"
        {%if include.nav.subpages %}class="dropdown-toggle" data-toggle="dropdown"{% endif %}>
         {% if include.nav.icon %}
