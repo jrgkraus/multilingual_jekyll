@@ -15,9 +15,7 @@ I was busy converting a number of sites from joomla! to jekyll. Since some of th
 
 The site should look like this:
 
-<div style="border:1x solid black">
 ![Main page](readme_img/screenshot-1.png)
-</div>
 
 ## Architecture
 
