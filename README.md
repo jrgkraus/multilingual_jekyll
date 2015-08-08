@@ -14,7 +14,7 @@ I was busy converting a number of sites from joomla! to jekyll. Since some of th
 * as an alternative, you can use `jekyll serve` (if you have a html server on your machine)
 
 The site should look like this:
-![Main page](readme_img/screenshot_1.png)
+![Main page](readme_img/screenshot-1.png)
 
 ## Architecture
 
