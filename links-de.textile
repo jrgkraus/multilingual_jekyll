@@ -1,7 +1,0 @@
----
-layout: default
-url-base: links
-lang: de
----
-
-{% include page-simple.textile %}

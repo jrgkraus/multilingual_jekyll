@@ -1,7 +1,0 @@
----
-layout: default
-url-base: yaml_files
-lang: en
----
-
-{% include page-simple.textile %}
