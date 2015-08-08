@@ -14,9 +14,9 @@ I was busy converting a number of sites from joomla! to jekyll. Since some of th
 * as an alternative, you can use `jekyll serve` (if you have a html server on your machine)
 
 The site should look like this:
-
+```
 ![Main page](readme_img/screenshot-1.png)
-
+```
 ## Architecture
 
 ### YAML content <a id="yaml-content"></a>
@@ -127,15 +127,15 @@ The "title" subtree is used for the navigation link. It contains texts in the va
 
 For the rendering of the site, it is important to have one file for each language version of each page. In this template, the following skeleton files are used:
 
-* index.textile
+* index.textile  
 The main page in default language
-* index-de.textile
+* index-de.textile  
 Main page in german language
-* subpages.textile
+* subpages.textile  
 Header entry for the submenu in main nav
-* sub-1.textile
+* sub-1.textile  
 First submenu entry in default lang
-* sub-1-de.textile
+* sub-1-de.textile  
 First submenu entry in German
 
 and so on.
